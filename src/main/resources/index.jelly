@@ -1,0 +1,4 @@
+<?jelly escape-by-default='true'?>
+<div>
+    Logs and prevents attempts to call <code>System#exit</code> and similar methods for troubleshooting purposes.
+</div>
