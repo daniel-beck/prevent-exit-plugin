@@ -12,8 +12,10 @@ Important: This plugin does not improve the security of Jenkins. Users with acce
 The security manager gets installed when the plugin is loaded, replacing any previously set security manager.
 By default, a message including stack trace is logged at attempts to exit the Jenkins controller process, and a `SecurityException` is thrown.
 
-While Jenkins is running, the plugin behavior can be configured by setting the static field `io.jenkins.plugins.preventexit.PreventExitSecurityManager.DISABLE` to `true` in the script console.
+To not prevent the JVM from exiting, set the Java system property `io.jenkins.plugins.preventexit.PreventExitSecurityManager.DISABLE` to `true` on startup.
 While this flag is set, only a message is logged, but the attempt to shut down Jenkins succeeds.
+
+While Jenkins is already running, the plugin behavior can be configured by setting the static field `io.jenkins.plugins.preventexit.PreventExitSecurityManager.DISABLE` to `true` in the script console.
 
 ## Contributing
 
